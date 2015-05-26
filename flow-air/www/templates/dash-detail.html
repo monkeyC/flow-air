@@ -1,0 +1,52 @@
+<ion-view  view-title="{{dash.name}}">
+
+  <ion-content class="padding">
+    <div class="list card">
+       
+          <div class="item-thumbnail-left ">
+      <img ng-src="{{dash.face}}">
+      Nom de la plante : {{dash.name}} <br/>
+      Nom latin de la plante : {{dash.latinNameText}} 
+    </div>
+
+    </div>
+    <div class="list card">
+      <div class="item item-divider">
+         <i class="icon ion-android-sunny"></i>
+
+       Luminosité 
+
+      </div>
+      <div class="item item-body">
+        <div>
+         La luminostié de votre plante est : {{dash.lumInstruction}}<br/>
+         Conseil : {{dash.conseilLum}}
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">
+        <i class="icon ion-thermometer"></i>
+          Température
+      </div>
+      <div class="item item-body">
+        <div>
+          La température de votre plante est : {{dash.tempInstruction}}<br/>
+          Conseil : {{dash.conseilTemp}}
+        </div>
+      </div>
+    </div>
+    <div class="list card">
+      <div class="item item-divider">
+        <i class="icon ion-waterdrop"></i>
+        Humidité
+      </div>
+      <div class="item item-body">
+        <div>
+           L'humidité de votre plante est : {{dash.humInstruction}} <br/>
+           Conseil : {{dash.conseilHum}}
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
