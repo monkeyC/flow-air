@@ -1,6 +1,27 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {})
+
+.controller('FlowersCtrl', function($scope, Flowers) {
+  $scope.flowers = Flowers.all();
+  $scope.remove = function(flower) {
+    Flowers.remove(flower);
+  }
+})
+
+.controller('FlowerDetailCtrl', function($scope, $stateParams, Flowers) {
+  $scope.flower = Flowers.get($stateParams.flowerId);
+})
+
+.controller('DashCtrl', function($scope, Dashs) {
+    $scope.dashs = Dashs.all();
+  $scope.remove = function(dash) {
+    Dashs.remove(dash);
+  }
+})
+
+.controller('DashDetailCtrl', function($scope, $stateParams, Dashs) {
+  $scope.dash = Dashs.get($stateParams.dashId);
+})
 
 .controller('ChatsCtrl', function($scope, Chats) {
   $scope.chats = Chats.all();
