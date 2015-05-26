@@ -1,28 +1,40 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="Flow-air">
+
   <ion-content class="padding">
-    <div class="list card">
-      <div class="item item-divider">Recent Updates</div>
-      <div class="item item-body">
-        <div>
-          There is a fire in <b>sector 3</b>
-        </div>
+
+  <a href="#/tab/flowers">
+  <button class="button button-full button-positive">
+    Ajouter une plante
+  </button>
+  </a>
+
+      <div class="list card ">
+      <div class="item item-divider">
+
+       Fleur de mon jardin
+
       </div>
+      <ion-item class="item-remove-animate item-avatar item-icon-right " ng-repeat="dash in dashs" type="item-text-wrap" href="#/tab/dash/{{dash.id}}">
+        <img ng-src="{{dash.face}}">
+        <a href="#/tab/dash/{{dash.id}}" style="float:right;">
+          <button class="button">
+            <i class="icon ion-close-round"></i>
+          </button>
+        </a>
+        <a href="#/tab/flowers" style="float:right;">
+          <button class="button" style="float:right;">
+            <i class="icon ion-refresh"></i>
+          </button>
+        </a>
+        
+        <h2>{{dash.name}}</h2>
+        <p>{{dash.latinNameText}}</p>
+        
+        
+       
+      </ion-item>
     </div>
-    <div class="list card">
-      <div class="item item-divider">Health</div>
-      <div class="item item-body">
-        <div>
-          You ate an apple today!
-        </div>
-      </div>
-    </div>
-    <div class="list card">
-      <div class="item item-divider">Upcoming</div>
-      <div class="item item-body">
-        <div>
-          You have <b>29</b> meetings on your calendar tomorrow.
-        </div>
-      </div>
-    </div>
+
+
+
   </ion-content>
-</ion-view>
